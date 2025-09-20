@@ -14,16 +14,15 @@ export default function LandingPage() {
       <section className="mt-20 pb-12 space-y-10 md:space-y-15 px-5">
         <div className="container mx-auto px-4 md:px-6 text-center space-y-6">
           <Badge variant="outline" className="bg-green-100 text-green-700">
-            Split expenses. Simplify life.
+            Split expenses, not Friendships!
           </Badge>
 
           <h1 className="gradient-title mx-auto max-w-6xl text-4xl font-bold md:text-8xl">
-            The smartest way to split expenses with friends
+            The smartest way to split expenses!
           </h1>
 
           <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed">
-            Track shared expenses, split bills effortlessly, and settle up
-            quickly. Never worry about who owes who again.
+            Track shared expenses, split bills effortlessly, and settle up with ease using Splitzy.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row justify-center">
@@ -69,11 +68,10 @@ export default function LandingPage() {
             Features
           </Badge>
           <h2 className="gradient-title mt-2 text-3xl md:text-4xl">
-            Everything you need to split expenses
+            Everything you need to manage shared expenses
           </h2>
           <p className="mx-auto mt-3 max-w-[700px] text-gray-500 md:text-xl/relaxed">
-            Our platform provides all the tools you need to handle shared
-            expenses with ease.
+            Splitzy offers a comprehensive suite of features designed to make expense sharing effortless and transparent.
           </p>
 
           <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2 lg:grid-cols-3">

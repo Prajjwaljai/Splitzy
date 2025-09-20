@@ -8,8 +8,8 @@ import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Splitr",
-  description: "The smartest way to split expenses with friends",
+  title: "Splitzy",
+  description: "Split expenses with ease",
 };
 
 export default function RootLayout({ children }) {
