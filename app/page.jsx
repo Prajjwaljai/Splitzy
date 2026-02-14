@@ -139,9 +139,6 @@ export default function LandingPage() {
                     <Avatar>
                       {/* Placeholder avatar */}
                       <AvatarImage src={image} alt={name} />
-                      <AvatarFallback className="uppercase">
-                        {name.charAt(0)}
-                      </AvatarFallback>
                     </Avatar>
                     <div className="text-left">
                       <p className="text-sm font-medium">{name}</p>
