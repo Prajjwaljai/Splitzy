@@ -140,7 +140,7 @@ export default function LandingPage() {
                       {/* Placeholder avatar */}
                       <AvatarImage src={image} alt={name} />
                       <AvatarFallback className="uppercase">
-                        {name?.charAt(0) ?? "?"}
+                        {name.charAt(0)}
                       </AvatarFallback>
                     </Avatar>
                     <div className="text-left">
