@@ -1,18 +1,14 @@
-"use client";
-
-
-import { useState, useEffect } from "react";
 import { useQuery, useMutation } from "convex/react";
+import { useState, useEffect } from "react";
 import { toast } from "sonner";
 
-// ✅ Hook for queries
-export const useConvexQuery = (query, args = undefined) => {
-  const result = useQuery(query, args);
-
+export const useConvexQuery = (query, ...args) => {
+  const result = useQuery(query, ...args);
   const [data, setData] = useState(undefined);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Use effect to handle the state changes based on the query result
   useEffect(() => {
     if (result === undefined) {
       setIsLoading(true);
@@ -29,23 +25,25 @@ export const useConvexQuery = (query, args = undefined) => {
     }
   }, [result]);
 
-  return { data, isLoading, error };
+  return {
+    data,
+    isLoading,
+    error,
+  };
 };
 
-// ✅ Hook for mutations
 export const useConvexMutation = (mutation) => {
   const mutationFn = useMutation(mutation);
-
   const [data, setData] = useState(undefined);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const mutate = async (args) => {
+  const mutate = async (...args) => {
     setIsLoading(true);
     setError(null);
 
     try {
-      const response = await mutationFn(args);
+      const response = await mutationFn(...args);
       setData(response);
       return response;
     } catch (err) {
